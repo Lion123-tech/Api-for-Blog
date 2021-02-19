@@ -50,6 +50,7 @@ app.get("/",(req,res,next)=>{
 });
 app.route("/register").post(auth.register);
 app.route("/login").post(auth.login);
+app.route("/logout").post(auth.logout);
 app.route("/blogs").get(r3.getall).post(r1.create);
 app.route("/blogs/:title/:posttype").delete(r5.delete);
 app.route("/blogs/update").post(r2.updateblogs);
